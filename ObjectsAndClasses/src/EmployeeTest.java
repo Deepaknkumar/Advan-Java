@@ -27,6 +27,8 @@ public class EmployeeTest {
 }
 
 class Employee{                     // We can define non public classes in the same source file
+
+    private static int nextId = 1;
     private String name;
     private double salary;
     private LocalDate hireDay;
