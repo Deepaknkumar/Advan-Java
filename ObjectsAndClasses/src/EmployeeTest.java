@@ -21,6 +21,8 @@ public class EmployeeTest {
         for (Employee e: staff){
             System.out.println("name="+ e.getName() + ",salary=" + e.getSalary() + ",hireDay=" + e.getHireDay());
         }
+
+        System.out.println(staff[0].equals(staff[1]));
     }
 }
 
@@ -48,7 +50,11 @@ class Employee{                     // We can define non public classes in the s
     }
 
     public void raiseSalary(double byPercent){
-        double raise = salary*byPercent / 100;
-        salary += raise;
+        double raise = this.salary*byPercent / 100;
+        this.salary += raise;
+    }
+
+    public boolean equals(Employee other){
+        return name.equals(other.name);
     }
 }
