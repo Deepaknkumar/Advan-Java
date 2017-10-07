@@ -31,6 +31,8 @@ public class Manager extends Employee {
         bonus = b;
     }
 
+    public double getBonus(){return bonus;}
+
     public boolean equals(Object otherObject){
         if(!super.equals(otherObject)){
             return false;
